@@ -1,0 +1,1 @@
+Total assimilation is achieved when the majority culture of most, all? is the same. The win will be granted to the [[head of the culture]]. Cultures without a head of culture aren't eligible for this kind of win.
