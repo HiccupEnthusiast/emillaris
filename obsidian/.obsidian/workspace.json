@@ -13,17 +13,17 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System.md",
+                "file": "Planet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "System"
+              "title": "Planet"
             },
             "group": "cba064aa1cc5331b"
           },
           {
-            "id": "4196744fc8808112",
+            "id": "d42215df8bc4605a",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -44,12 +44,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System.md",
+                "file": "Planet.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "System"
+              "title": "Planet"
             },
             "group": "cba064aa1cc5331b"
           }
@@ -72,7 +72,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -192,9 +193,12 @@
   },
   "active": "8e69939dadc7db6c",
   "lastOpenFiles": [
+    "Planet.md",
     "main.md",
     "System.md",
     "Galaxy.md",
+    "Index.md",
+    "List of system features can be found here.md",
     "Victories/Technological Victory.md",
     "Victories/Total Assimilation.md",
     "Victories/Diplomatic Victory.md",

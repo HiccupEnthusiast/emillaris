@@ -1,4 +1,6 @@
 {
   "theme": "obsidian",
-  "accentColor": "#f5ad5c"
+  "accentColor": "#f5ad5c",
+  "cssTheme": "Catppuccin",
+  "textFontFamily": "0xProto Nerd Font"
 }
