@@ -11,8 +11,16 @@ config_version=5
 [application]
 
 config/name="emillaris"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
+run/flush_stdout_on_print=true
 config/icon="res://icon.svg"
+
+[autoload]
+
+Log="*res://src/logger.gd"
+SignalBus="*res://src/signal_bus.gd"
+Global="*res://src/global.gd"
 
 [rendering]
 

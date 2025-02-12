@@ -1,6 +1,6 @@
 The game will mainly contain two screens with various overlays. The [[galaxy]] and the [[system]] screens. The main vectors which the player interacts with are [[systems and their hyperlanes]] and [[planets inside systems]].
 
-The game will focus on the [[warfare]] aspect. Everything the player does should help directly or indirectly to this goal. There are two main ways to engage in combat, [[space combat]] and [[ground combat]]. War should be a long term effort for the majority of the game, a mechanic that exemplifies this the [[capturing and integrating]] of enemy planets. As the game progresses options to make warfare faster are unlocked.
+The game will focus on the [[warfare]] aspect. Everything the player does should help directly or indirectly to this goal. There are two main ways to engage in combat, [[Space Combat]] and [[ground combat]]. War should be a long term effort for the majority of the game, a mechanic that exemplifies this the [[capturing and integrating]] of enemy planets. As the game progresses options to make warfare faster are unlocked.
 
 In order to maintain a competent army the empire will need a stable [[economy]]. The main system to interact with this economy is the [[population of planets]]. The economy systems should directly influence the capacity to build and maintain a [[navy]] and [[army]], on top of indirectly affecting them, (like a resource that affects the output of all other resources including one(s) required by the army/navy).
 
