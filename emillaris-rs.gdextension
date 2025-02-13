@@ -4,11 +4,15 @@ compatibility_minimum = 4.3
 reloadable = true
 
 [libraries]
-linux.debug.x86_64 =     "res://rust/target/debug/libemillaris_rs.so"
-linux.release.x86_64 =   "res://rust/target/release/libemillaris_rs.so"
-windows.debug.x86_64 =   "res://rust/target/debug/emillaris_rs.dll"
-windows.release.x86_64 = "res://rust/target/release/emillaris_rs.dll"
-macos.debug =            "res://rust/target/debug/libemillaris_rs.dylib"
-macos.release =          "res://rust/target/release/libemillaris_rs.dylib"
-macos.debug.arm64 =      "res://rust/target/debug/libemillaris_rs.dylib"
-macos.release.arm64 =    "res://rust/target/release/libemillaris_rs.dylib"
+linux.debug.x86_64 =		"res://rust/target/debug/libemillaris_rs.so"
+linux.release.x86_64 =		"res://rust/target/release/libemillaris_rs.so"
+windows.debug.x86_64 =		"res://rust/target/debug/emillaris_rs.dll"
+windows.release.x86_64 =	"res://rust/target/release/emillaris_rs.dll"
+macos.debug =			"res://rust/target/debug/libemillaris_rs.dylib"
+macos.release =			"res://rust/target/release/libemillaris_rs.dylib"
+macos.debug.arm64 =		"res://rust/target/debug/libemillaris_rs.dylib"
+macos.release.arm64 =		"res://rust/target/release/libemillaris_rs.dylib"
+web.debug.threads.wasm32 =	"res://rust/target/wasm32-unknown-emscripten/debug/emillaris_rs.threads.wasm"
+web.release.threads.wasm32 =	"res://rust/target/wasm32-unknown-emscripten/release/emillaris_rs.threads.wasm"
+web.debug.wasm32 =		"res://rust/target/wasm32-unknown-emscripten/debug/emillaris_rs.wasm"
+web.release.wasm32 =		"res://rust/target/wasm32-unknown-emscripten/release/emillaris_rs.wasm"

@@ -18,7 +18,7 @@ use tracing::{debug, info, warn};
 
 use crate::websocket::default_polling_timer;
 
-use super::{client::ClientInfo, Message};
+use super::{client::ClientInfo, ServerMessage};
 
 struct PendingConnection {
     id: i64,
@@ -92,7 +92,7 @@ impl ConnectedClients {
     fn insert_client(&mut self, socket: Gd<WebSocketPeer>, info: ClientInfo) {
         self.0.insert(info.id, (socket, info));
     }
-    fn send_message(&mut self, recipient: MessageRecipient, message: Message) {
+    fn send_message(&mut self, recipient: MessageRecipient, message: ServerMessage) {
         match recipient {
             MessageRecipient::All => {
                 for (socket, _) in self.0.values_mut() {
@@ -183,7 +183,7 @@ impl Server {
 
                     self.connected_clients.send_message(
                         MessageRecipient::Exclude(&[pending.id]),
-                        Message::ClientJoin(info.clone()),
+                        ServerMessage::ClientJoin(info.clone()),
                     );
 
                     let mut infos = self
@@ -197,12 +197,12 @@ impl Server {
 
                     self.connected_clients.send_message(
                         MessageRecipient::Include(&[pending.id]),
-                        Message::ClientList(infos),
+                        ServerMessage::ClientList(infos),
                     );
 
                     self.connected_clients.send_message(
                         MessageRecipient::Include(&[pending.id]),
-                        Message::Hello(info),
+                        ServerMessage::Hello(info),
                     );
 
                     info!(id = pending.id, "connection completed");

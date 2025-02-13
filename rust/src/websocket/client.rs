@@ -10,7 +10,7 @@ use godot::{
 use serde::{Deserialize, Serialize};
 use tracing::{debug, error};
 
-use crate::websocket::Message;
+use crate::websocket::ServerMessage;
 
 #[derive(Clone, Debug, Default, Deserialize, Serialize)]
 pub struct ClientInfo {
@@ -32,19 +32,19 @@ pub struct Client {
 
 impl Client {
     #[inline]
-    fn handle_message(&mut self, message: Message) {
+    fn handle_message(&mut self, message: ServerMessage) {
         match message {
-            Message::ClientJoin(client_info) => {
+            ServerMessage::ClientJoin(client_info) => {
                 self.base_mut()
                     .emit_signal("client_joined", &[client_info.to_variant()]);
             }
-            Message::ClientList(client_infos) => {
+            ServerMessage::ClientList(client_infos) => {
                 for info in client_infos {
                     self.base_mut()
                         .emit_signal("client_joined", &[info.to_variant()]);
                 }
             }
-            Message::Hello(client_info) => {
+            ServerMessage::Hello(client_info) => {
                 self.base_mut()
                     .emit_signal("connection_established", &[client_info.to_variant()]);
                 self.info = client_info;
@@ -64,7 +64,7 @@ impl Client {
         if self.info.is_alive {
             for _ in 0..self.socket.get_available_packet_count() {
                 let packet = self.socket.get_packet();
-                match rmp_serde::from_slice::<Message>(packet.as_slice()) {
+                match rmp_serde::from_slice::<ServerMessage>(packet.as_slice()) {
                     Ok(message) => {
                         debug!(name = self.info.name, "Received message: {:?}", message);
                         self.handle_message(message);

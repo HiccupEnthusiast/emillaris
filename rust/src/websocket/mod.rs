@@ -3,7 +3,7 @@ mod message;
 mod server;
 
 pub use client::Client;
-pub use message::Message;
+pub use message::ServerMessage;
 pub use server::Server;
 
 pub fn default_polling_timer() -> godot::obj::Gd<godot::classes::Timer> {
