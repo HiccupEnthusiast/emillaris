@@ -4,19 +4,15 @@ use std::{
 };
 
 use godot::{
-    builtin::{Callable, PackedStringArray, Variant},
+    builtin::PackedStringArray,
     classes::{
-        stream_peer_tcp::Status as TcpStatus, timer::TimerProcessCallback,
-        web_socket_peer::State as WebSocketState, INode, Node, StreamPeerTcp, TcpServer, Timer,
-        WebSocketPeer,
+        stream_peer_tcp::Status as TcpStatus, web_socket_peer::State as WebSocketState, INode,
+        Node, StreamPeerTcp, TcpServer, Timer, WebSocketPeer,
     },
-    global::{godot_print, randi_range},
-    obj::{Base, Gd, NewAlloc, NewGd, WithBaseField},
+    obj::{Base, Gd, NewGd, WithBaseField},
     prelude::{godot_api, GodotClass, PackedByteArray},
 };
 use tracing::{debug, info, warn};
-
-use crate::websocket::default_polling_timer;
 
 use super::{client::ClientInfo, ServerMessage};
 
