@@ -1,6 +1,0 @@
-[gd_resource type="Resource" script_class="Message" load_steps=2 format=3 uid="uid://bcr4pqd2yvyua"]
-
-[ext_resource type="Script" path="res://src/websocket/message.gd" id="1_1x518"]
-
-[resource]
-script = ExtResource("1_1x518")

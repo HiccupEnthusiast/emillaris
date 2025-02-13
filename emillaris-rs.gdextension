@@ -1,0 +1,14 @@
+[configuration]
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = 4.3
+reloadable = true
+
+[libraries]
+linux.debug.x86_64 =     "res://rust/target/debug/libemillaris_rs.so"
+linux.release.x86_64 =   "res://rust/target/release/libemillaris_rs.so"
+windows.debug.x86_64 =   "res://rust/target/debug/emillaris_rs.dll"
+windows.release.x86_64 = "res://rust/target/release/emillaris_rs.dll"
+macos.debug =            "res://rust/target/debug/libemillaris_rs.dylib"
+macos.release =          "res://rust/target/release/libemillaris_rs.dylib"
+macos.debug.arm64 =      "res://rust/target/debug/libemillaris_rs.dylib"
+macos.release.arm64 =    "res://rust/target/release/libemillaris_rs.dylib"

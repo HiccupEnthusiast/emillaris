@@ -3,3 +3,4 @@
 /android/
 obsidian/.obsidian/workspace.json
 obsidian/.obsidian/graph.json
+**/target/
